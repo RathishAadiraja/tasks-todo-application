@@ -1,0 +1,30 @@
+{% extends 'todoapp/base.html' %}
+{% block content %}
+<div class="d-flex flex-column align-items-center shadow-lg mt-5 pb-0 px-2 px-sm-5 m-sm-5 rounded" id="task-detail">
+    {% if task.is_completed %}
+        <p class=" p-3 mb-0 font-weight-bold text-white w-75" id="is-completed">COMPLETED</p>
+    {% endif %}
+    <div class="d-flex flex-column flex-sm-row w-100 mt-5 justify-content-between" >
+        <a href="{% url 'todoapp:index' %}" class="btn btn-primary mb-3" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill mb-1 mr-1" viewBox="0 0 16 16">
+                <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"/>
+            </svg>
+            Go back
+        </a>
+        <a href="{% url 'todoapp:task-update' task.id %}" class="btn btn-primary mb-3" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square mb-1 mr-1" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg>
+            Edit
+        </a>
+    </div>
+    <h2 class="font-weight-bold my-3 custom-color">{{ task.task_title|upper }}</h2>
+    {% if task.task_description %}
+        <p class="overflow-auto mt-3 border rounded p-4 bg-white">{{ task.task_description }}</p>
+    {% endif %}
+    {% if task.task_deadline %}
+        <p class="bg-info text-white font-weight-bold py-3 w-75 mb-0 mt-auto">{{ task.task_deadline }}</p>
+    {% endif %}
+</div>
+{% endblock %}

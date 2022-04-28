@@ -1,0 +1,131 @@
+body{
+    background-color: #BEC6CD;
+}
+#login-input{
+    min-width: 240px;
+}
+#login-input ul{
+    padding: 0px 0px 0px 20px;
+}
+
+#main-page{
+    width: 100%;
+    background-color: #EEEEEE;
+    
+}
+#app-name{
+    font-size: 36px;
+    font-style: italic;
+    text-align: center;
+}
+.custom-color{
+    color: #1E3163;
+}
+
+#search-div{
+    width: 100%;
+}
+#search-input{
+    border-radius: 0px;
+    border: 3px solid #1976D2;
+    border-right: none;
+
+}
+
+#search-btn{
+    border-radius: 0px;
+}
+
+#search-input:focus, #search-btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#task-content{
+    width: 100%;
+}
+#task-deadline{
+    text-align: center;
+    width: 220px;
+    background-color: #0066b2
+}
+#is-completed{
+    width: 100%;
+    text-align: center;
+    background-color: #24C89A;
+}
+#comp{
+    width: 400px;
+}
+#task-block{
+    background-color: #7CB9E8;
+}
+#task-title{
+    max-width: 200px;
+    color: #ffff;
+    text-align: center;
+}
+#task-create{
+    width: 95%;
+    background-color: #EEEEEE;
+}
+#task-description textarea{
+    height: 150px;
+}
+#task-detail{
+    width: 100%;
+    max-height: 200vh;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+#create-title{
+    width: auto;
+}
+#go-back{
+    width: 100%;
+}
+
+
+@media screen and (min-width: 576px) {
+    #main-page, #task-create{
+        width: 90%;
+    }
+    #task-create-form{
+        width: 400px;
+    }
+    #task-detail{
+        min-height: 40vh;
+        max-height: 90vh;
+    }
+    #go-back{
+        width: auto;
+    }
+    #app-name{
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #main-page, #task-create{
+        width: 70%;
+    }
+    #is-completed{
+        width: 220px;
+    }
+    
+    #task-content{
+        width: auto;
+    }
+    #task-detail{
+        width: 70%;
+        max-height: 90vh;
+    }
+    #search-div{
+        width: 45%;
+    }
+    
+
+}
+
