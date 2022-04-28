@@ -25,8 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['my-tasks-todo.herokuapp.com']
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tasks-todo-application.herokuapp.com']
 
 
 # Application definition
