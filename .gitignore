@@ -1,3 +1,5 @@
+# Created Files #
+datadump.json
 # Django #
 *.log
 *.pot
